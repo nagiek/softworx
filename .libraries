@@ -1,6 +1,6 @@
 {
   "bootswatch": {
-    "3.3.5": [
+    "3.3.6": [
       "cerulean",
       "cosmo",
       "cyborg",
@@ -20,9 +20,6 @@
     ]
   },
   "bootstrap": {
-    "3.3.5": [
-      "bootstrap"
-    ],
     "3.3.6": [
       "bootstrap"
     ]
