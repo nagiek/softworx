@@ -1,0 +1,19 @@
+{
+  "name": "softworx",
+  "description": "Drupal 8 implementation of the Softworx theme",
+  "main": "",
+  "authors": [
+    "Keigan Ashall <keigan.ashall@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nagiek/softworx",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

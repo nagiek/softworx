@@ -20,5 +20,5 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'THEMENAME/global-styling'
-  - 'THEMENAME/bootstrap-scripts'
+  - 'softworx/global-styling'
+  - 'softworx/bootstrap-scripts'
