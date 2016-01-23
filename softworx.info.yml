@@ -1,0 +1,20 @@
+# core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Softworx'
+description: 'Drupal 8 implementation of the Softworx theme'
+
+# The following are dynamic library overrides based on certain critera,
+# usually a theme setting.
+#
+# @see \Drupal\bootstrap\Plugin\Alter\LibraryInfo::alter()
+#
+#  core/drupal.dialog: bootstrap/drupal.dialog
+#  core/drupal.dialog.ajax: bootstrap/drupal.dialog.ajax
+
+# Information added by Drupal.org packaging script on 2015-12-19
+version: '8.x-3.0-beta2'
+core: '8.x'
+project: 'bootstrap'
+datestamp: 1450531741
