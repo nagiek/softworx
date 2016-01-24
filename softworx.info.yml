@@ -5,6 +5,7 @@ base theme: bootstrap
 name: 'Softworx'
 description: 'Drupal 8 implementation of the Softworx theme'
 package: 'Bootstrap'
+version: 1.x-dev
 
 regions:
   navigation: 'Navigation'
