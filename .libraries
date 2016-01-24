@@ -1,21 +1,11 @@
 {
   "bootswatch": {
     "3.3.6": [
-      "cerulean",
-      "cosmo",
-      "cyborg",
-      "darkly",
       "flatly",
-      "journal",
       "lumen",
       "paper",
-      "readable",
       "sandstone",
       "simplex",
-      "slate",
-      "spacelab",
-      "superhero",
-      "united",
       "yeti"
     ]
   },

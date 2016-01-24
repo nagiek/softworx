@@ -87,16 +87,18 @@ module.exports = function (grunt) {
                 var latestVersion = [].concat(versions).pop();
                 var latestVariables = path.join(latestVersion, 'bootstrap', 'less', 'variables.less');
                 var latestMixins = path.join(latestVersion, 'bootstrap', 'less', 'mixins.less');
-                var themeVariables = path.join(version, library, (library === 'bootstrap' ? 'less' : theme), 'variables.less');
+                var themeVariables = path.join(latestVersion, library, (library === 'bootstrap' ? 'less' : theme), 'variables.less');
+                var bootstrapLess = path.join(latestVersion, 'bootstrap', 'less', 'bootstrap.less');
+                var themeLess = path.join(latestVersion, library, (library === 'bootstrap' ? 'less' : theme), library + '.less');
                 var backupVariables = path.join(version, 'bootstrap', 'less', 'variables.less');
-                var fileName = (library === 'bootstrap' ? 'overrides.min.css' : 'overrides-' + theme + '.min.css');
+                var fileName = (library === 'bootstrap' ? 'bootstrap-softworx.min.css' : 'bootstrap-softworx-' + theme + '.min.css');
                 var outputFile = path.join(cssPath, version, fileName);
 
                 // Resolve the variable files.
                 latestVariables = resolveVariables(latestVariables);
                 if (!latestVariables) return done(false);
-                themeVariables = resolveVariables(themeVariables, backupVariables);
-                if (!themeVariables) return grunt.fail.fatal("Unable to create: " + outputFile);
+                if (library !== 'bootstrap') themeVariables = resolveVariables(themeVariables, backupVariables);
+                themeLess = resolveVariables(themeLess, '');
 
                 var options = {
                   filename: outputFile,
@@ -105,11 +107,17 @@ module.exports = function (grunt) {
                 };
                 var imports = [
                   // First, import the latest bootstrap (missing variables).
-                  '@import "' + latestVariables + '"',
-                  // Then, override variables with theme.
-                  '@import "' + themeVariables + '"',
+                  '@import "' + path.join(pkg.paths.libraries, latestVariables) + '"',
                   // Then, import latest bootstrap mixins.
-                  '@import "' + latestMixins + '"',
+                  '@import "' + path.join(pkg.paths.libraries, latestMixins) + '"',
+                  // Then, override variables with theme.
+                  (library !== 'bootstrap' ? '@import "' + path.join(pkg.paths.libraries, themeVariables) + '"' : ''),
+                  // Then, import the variable overrides.
+                  '@import "' + path.join('less', 'variable-overrides.less') + '"',
+                  // Then, import bootstrap LESS.
+                  '@import "' + path.join(pkg.paths.libraries, bootstrapLess) + '"',
+                  // Then, import bootswatch LESS.
+                  (library !== 'bootstrap' ? '@import "' + path.join(pkg.paths.libraries, themeLess) + '"' : ''),
                   // Finally, import the base-theme overrides.
                   '@import "' + path.join('less', 'overrides.less') + '"'
                 ];
