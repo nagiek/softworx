@@ -1,7 +1,7 @@
 global-styling:
   css:
     theme:
-      css/3.3.6/bootstrap-softworx-sandstone.min.css: {}
+      css/3.3.6/bootstrap-softworx-lumen.min.css: {}
 
 bootstrap-scripts:
   js:
