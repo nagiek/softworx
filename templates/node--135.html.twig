@@ -65,13 +65,10 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
+<div{{ attributes.addClass('jumbotron') }}>
+
   {{ title_prefix }}
-  <h3>
-    <a href="{{ content.field_link }}"{{ title_attributes }}>
-      {{ label }}
-    </a>
-  </h3>
+    <h1{{ title_attributes }}>{{ label }}</h1>
   {{ title_suffix }}
 
   {% if display_submitted %}
@@ -88,4 +85,4 @@
     {{ content }}
   </div>
 
-</article>
+</div>
