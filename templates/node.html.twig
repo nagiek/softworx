@@ -67,20 +67,27 @@
 #}
 <article{{ attributes }}>
 
+  {{ title_prefix }}
+  {% if not page %}
+    <h3{{ title_attributes }}>
+      {% if content.field_logo %}{{ content.field_logo }}
+      {% else %}{{ label }}{% endif %}
+    </h3>
+  {% endif %}
+  {{ title_suffix }}
+
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
       <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        <p>{% trans %}Posted by {{ author_name }} on {{ date }}{% endtrans %}</p>
         {{ metadata }}
       </div>
     </footer>
   {% endif %}
 
-  {{ title_prefix }}
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content|without('field_logo') }}
   </div>
-  {{ title_suffix }}
 
 </article>

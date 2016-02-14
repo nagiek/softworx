@@ -118,9 +118,11 @@
     {# Highlighted #}
     {% if page.highlighted %}
       {% block highlighted %}
-        <div class="{{ container }} highlighted">
-          <div class="row">
-            <div{{ content_attributes.addClass('col-xs-12') }}>{{ page.highlighted }}</div>
+        <div class="highlighted">
+          <div class="{{ container }}">
+            <div class="row">
+              <div{{ content_attributes.addClass('col-xs-12') }}>{{ page.highlighted }}</div>
+            </div>
           </div>
         </div>
       {% endblock %}
@@ -129,9 +131,11 @@
     {# Help #}
     {% if page.help %}
       {% block help %}
-        <div class="{{ container }} help">
-          <div class="row">
-            <div{{ content_attributes.addClass('col-xs-12') }}>{{ page.help }}</div>
+        <div class="help">
+          <div class="{{ container }}">
+            <div class="row">
+              <div{{ content_attributes.addClass('col-xs-12') }}>{{ page.help }}</div>
+            </div>
           </div>
         </div>
       {% endblock %}
@@ -143,10 +147,12 @@
       {# Twig command for `Element::children` #}
       {% for key, content in page.content if key|first != '#' %}
         {% if content %}
-          <div class="{{ container }} {{ content.domid }}">
-            <div class="row">
-              <div{{ content_attributes.addClass('col-xs-12') }}>
-                {{ content }}
+          <div class="{{ content.name }}">
+            <div class="{{ container }}">
+              <div class="row">
+                <div{{ content_attributes.addClass('col-xs-12') }}>
+                  {{ content }}
+                </div>
               </div>
             </div>
           </div>
@@ -159,10 +165,12 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      <div class="row">
-        <div class='col-xs-12'>
-          {{ page.footer }}
+    <footer class="footer" role="contentinfo">
+      <div class="{{ container }}">
+        <div class="row">
+          <div class='col-xs-12'>
+            {{ page.footer }}
+          </div>
         </div>
       </div>
     </footer>

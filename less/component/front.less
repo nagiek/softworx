@@ -1,0 +1,32 @@
+.path-frontpage {
+  text-align: center;
+  h2.block-title {
+    margin-top: 50px;
+  }
+
+  .jumbotron {
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Move this to conditional comments */
+  /*
+  .ie6 .field--name-field-logo,
+  .ie7 .field--name-field-logo,
+  .ie8 .field--name-field-logo {
+      list-style:none;
+      behavior: expression(
+          function(t){
+              t.insertAdjacentHTML('afterBegin','<span class="frame_before"></span>');
+              t.runtimeStyle.behavior = 'none';
+          }(this)
+      );
+  }
+  */
+
+  .more-link {
+    margin-top: ((100 - @font-size-h3) / 2);
+    font-size: @font-size-h3;
+    text-align: center;
+  }
+}

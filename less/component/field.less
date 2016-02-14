@@ -23,3 +23,49 @@
 .field--label-inline .field--label::after {
   content: ':';
 }
+
+.field--label-inline .field--label::after {
+  content: ':';
+}
+
+
+.path-frontpage,
+.path-customers {
+
+  .field--name-field-logo {
+      text-align: center;
+  }
+
+  .field--name-field-logo:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+  }
+
+  .field--name-field-logo img {
+      vertical-align: middle;
+      max-height: 100px;
+      display: inline-block;
+  }
+}
+
+.path-frontpage {
+  .field--name-field-logo {
+    height: 100px;      /* equals max image height */
+  }
+
+  .field--name-field-logo img {
+    max-height: 100px;
+  }
+}
+
+.path-customers {
+  .field--name-field-logo {
+    height: 120px;      /* equals max image height */
+  }
+
+  .field--name-field-logo img {
+    max-height: 120px;
+  }
+}
