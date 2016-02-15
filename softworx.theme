@@ -5,3 +5,41 @@
  *
  * Place your custom PHP code in this file.
  */
+
+/**
+ * Implements template_preprocess_node
+ */
+function softworx_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  switch ($node->getType()) {
+    case 'story':
+      if ($node->hasField('field_link')) {
+        $variables['story_url'] = $node->get('field_link')->uri;
+      } else {
+        $variables['story_url'] = NULL;
+      }
+      break;
+  }
+}
+
+
+/**
+ * Implements template_preprocess_links
+ */
+function softworx_preprocess_links(&$variables) {
+  if (isset($variables['links']['node-readmore'])) {
+    $link = &$variables['links']['node-readmore']['link'];
+    $node = $link['#url']->getOption('entity');
+    switch ($node->getType()) {
+      case 'quick_link':
+        // Not sure which one of these is the crucial one to change.
+        // $ajax = array('dialogType' => 'modal');
+        // $link['#url']->setOption('ajax', $ajax);
+        // $link['#options']['ajax'] = $ajax;
+        // $link['#ajax'] = $ajax;
+        $link['#options']['attributes']['class'][] = 'use-ajax';
+        $link['#options']['attributes']['data-dialog-type'] = 'modal';
+        break;
+    }
+  }
+}

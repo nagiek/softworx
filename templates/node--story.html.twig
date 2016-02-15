@@ -67,11 +67,15 @@
 #}
 <article{{ attributes }}>
   {{ title_prefix }}
-  <h3>
-    <a href="{{ content.field_link }}"{{ title_attributes }}>
-      {{ label }}
-    </a>
-  </h3>
+  {% if not page %}
+    <h3{{ title_attributes }}>
+      {% if story_url %}
+        <a href="{{ story_url }}" target="_blank">{{ label }}</a>
+      {% else %}
+        {{ label }}
+      {% endif %}
+    </h3>
+  {% endif %}
   {{ title_suffix }}
 
   {% if display_submitted %}
@@ -85,7 +89,7 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content|without('field_link') }}
   </div>
 
 </article>

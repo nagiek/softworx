@@ -6,6 +6,27 @@
  */
 
 // Set the proper directory for the Bootstrap Glyphicon font.
-@icon-font-path: '../bootstrap/fonts/';
+@icon-font-path:        '../../bootstrap/fonts/';
 
-@jumbotron-bg:                   transparent;
+@jumbotron-bg:          transparent;
+
+@brand-primary:         #5980ca;
+
+//** Global textual link color.
+@link-color:                  @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:            darken(@link-color, 15%);
+
+
+@component-active-bg:         @brand-primary;
+
+@btn-primary-bg:              @brand-primary;
+@btn-primary-border:          darken(@btn-primary-bg, 5%);
+
+@pagination-active-bg:        @brand-primary;
+@pagination-active-border:    @brand-primary;
+
+@label-primary-bg:            @brand-primary;
+@progress-bar-bg:             @brand-primary;
+@panel-primary-heading-bg:    @brand-primary;
+@badge-bg:                    @brand-primary;

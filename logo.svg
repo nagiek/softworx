@@ -1,26 +1,10 @@
-<svg
-     version="1.1"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="32px" height="32px"
-     viewBox="0 0 32 32" preserveAspectRatio="none">
-   <g>
-<image width="32" height="32" xlink:href="data:image/png;base64,
-iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAohJREFUeNrEl1tIVGEQx12L0BQjoXwpoRfxIQUJuhAIvVRLIRQELYj1
-oKDgpQgVNQhBChQfLFDLoovVS0RQYuqLPUgFgTcQia5CSBBERUiKuv0+GGGJPd/l7Nkc+DNn98w3
-8/++mXNmTigajaasp4T8Ejhx+GIWavOTkbaviRBITWBtIbgDkfT1InAGHAGDkNj2X1NAwFLU3ZgN
-fATnSMezpBIgcAaqWRBPHoFLEJlNVgpWRC943D8FJiDaA3IDOQEc5aNK5Ocou3vDf3u5HgFbNEu/
-gzrs7/smQKAa1BWQEfN3L06ruFcmdWCSa+A8a1acUkCAetTVf4IrqeReBIf3pPhMojbR41QDBDiO
-atc4LRU9ZVk7FXKaZgLyhus2OExbS6FDAV+OV5jxTqAa7DQ4e4qzTegiBwKZoFFLAKdqZ+UGR8Pk
-vwu9A7i+AU8TY6vuBNTjtcvgJB0nJyGhCvAgeO9AIBsc0hHYb+GkGDyGxG1ITHIdlmfeVop1BAoc
-HJ2FxENIqBOodVhXoCOw3TGnEfVCgsQDrmcc0uBJYNVHR20S3R/EPDDvw0c+p6AK94Wl/aKOwLTP
-uSIPfAHLFrYfdAReJzBZ2abvpY7ABHjrg8AcyAEbDXZL4LknAapZGdxyDD4vpPdZ2A7JC0zbC3pl
-R7bSJ70+YjFNtVoNJNKObQbMcXAA7AFjhhGvA6INVvMAhgOoBkNwNQsck5Z8wxB8wGuQ9VwEiQ7U
-BSmcWPkGOiXnv2QS3q0Jru6rCWrZ71BaKH0/JLXxCmd/+F8RuKkJ/gO0YNsd6IcJgcPSfI56mLxT
-3RJcJ/jnoD9MNsg3oZobcqWxqGf/J/gkdTFJ4N9J/zoOSv4KMAC++teHNUg1rQAAAABJRU5ErkJg
-gg==
-"/>
-   </g>
+<?xml version="1.0"?>
+<svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#5980ca" stroke="#000000" stroke-width="0" x="6.5" y="12" width="22" height="22" id="svg_2" opacity="0.4"/>
+  <rect fill="#5980ca" stroke="#000000" stroke-width="0" x="2" y="2" width="22" height="22" id="svg_1" opacity="0.4"/>
+  <rect fill="#5980ca" stroke="#000000" stroke-width="0" x="12" y="6.5" width="22" height="22" id="svg_3" opacity="0.4"/>
+ </g>
 </svg>
-

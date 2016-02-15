@@ -73,7 +73,7 @@
       ]
     %}
     <nav{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      <div class="container-fluid">
+      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           {{ page.navigation }}
@@ -160,6 +160,13 @@
           <a id="main-content"></a>
           {{ page.content }}
         {% endblock %}
+
+        {# Secondary Content #}
+        {% if page.secondary_content %}
+          {% block secondary_content %}
+            {{ page.secondary_content }}
+          {% endblock %}
+        {% endif %}
       </section>
 
       {# Sidebar Second #}
