@@ -6,6 +6,19 @@
  * Place your custom PHP code in this file.
  */
 
+ /**
+  * Implements template_preprocess_page
+  */
+ function softworx_preprocess_page(&$variables) {
+   if ($variables['is_front']) {
+     $variables['settings']['logo'] = array(
+       'path' => $variables['directory'] + '/logo-inverse.svg',
+       'url' => $variables['base_path'] + '/' + $variables['directory'] + '/logo-inverse.svg',
+       'use_default' => FALSE,
+     ) ;
+   }
+ }
+
 /**
  * Implements template_preprocess_node
  */

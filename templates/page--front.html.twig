@@ -88,7 +88,7 @@
         {%
           set navbar_classes = [
             'navbar',
-            theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+            'navbar-inverse',
             'container',
           ]
         %}
@@ -152,7 +152,7 @@
   {% block secondary_content %}
     {# Twig command for `Element::children` #}
     {% for key, content in page.secondary_content if key|first != '#' %}
-        <section class="{{ key }}">
+        <section class="{{ key }} sub-container">
           <div class="{{ container }}">
             <div class="row">
               <div{{ content_attributes.addClass('col-xs-12') }}>

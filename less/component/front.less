@@ -1,23 +1,40 @@
 .path-frontpage {
   text-align: center;
-  h2.block-title {
-    margin-top: 50px;
-  }
 
   &.navbar-is-fixed-top {
     margin-top: 0;
   }
   .navbar {
     margin-top:@jumbotron-padding;
+    margin-bottom: 0;
   }
 
+  h3.logo-title {
+    margin: 0;
+  }
+
+  .main-container {
+    background: @brand-primary;
+    border-bottom: solid @border-radius-large @btn-primary-border;
+    color: #fff;
+  }
   .jumbotron {
     border: none;
     box-shadow: none;
   }
 
-  h3.logo-title {
-    margin: 0;
+  .sub-container {
+    padding: 20px 0 50px;
+    border-bottom: solid @border-radius-small @gray-lighter;
+  }
+
+  .sub-container:last-child {
+    border-bottom: none;
+  }
+
+  .views_block__quick_links_block_1,
+  .views_block__news_block_1 {
+    background-color: lighten(@gray-lighter, 1%);
   }
 
   /* Move this to conditional comments */
