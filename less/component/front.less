@@ -4,8 +4,12 @@
   &.navbar-is-fixed-top {
     margin-top: 0;
   }
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar {
+      margin-top:@jumbotron-padding;
+    }
+  }
   .navbar {
-    margin-top:@jumbotron-padding;
     margin-bottom: 0;
   }
 
