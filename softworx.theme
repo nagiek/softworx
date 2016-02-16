@@ -6,18 +6,35 @@
  * Place your custom PHP code in this file.
  */
 
- /**
-  * Implements template_preprocess_page
-  */
- function softworx_preprocess_page(&$variables) {
-   if ($variables['is_front']) {
-     $variables['settings']['logo'] = array(
-       'path' => $variables['directory'] + '/logo-inverse.svg',
-       'url' => $variables['base_path'] + '/' + $variables['directory'] + '/logo-inverse.svg',
-       'use_default' => FALSE,
-     ) ;
-   }
- }
+
+
+/**
+ * Implements hook_block_build_BASE_BLOCK_ID_alter
+ */
+// CAN'T USE THIS YET
+// Drupal 8 does not allow themes to implement hook_block_build_alter.
+// Have to wait until a patch lands to clean this up.
+//
+// function softworx_block_build_system_branding_block_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+//   $build['#cache']['contexts'][]='url';
+// }
+
+/**
+ * Implements template_preprocess_block
+ */
+function softworx_preprocess_block(&$variables) {
+  // Caching temporarily moved to the `blockcache` module.
+
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      if (\Drupal::service('path.matcher')->isFrontPage()) {
+        if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+          $variables['site_logo'] = str_replace('logo', 'logo-inverse', $variables['content']['site_logo']['#uri']);
+        }
+      }
+      break;
+  }
+}
 
 /**
  * Implements template_preprocess_node
