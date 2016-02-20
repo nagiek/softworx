@@ -4,13 +4,20 @@
   &.navbar-is-fixed-top {
     margin-top: 0;
   }
+
+  .navbar {
+    margin-left: -@navbar-padding-horizontal;
+    margin-right: -@navbar-padding-horizontal;
+  }
+
   @media (min-width: @grid-float-breakpoint) {
     .navbar {
       margin-top:@jumbotron-padding;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: @border-radius-large;
     }
-  }
-  .navbar {
-    margin-bottom: 0;
   }
 
   h3.logo-title {

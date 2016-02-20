@@ -18,26 +18,13 @@ body {
     padding-bottom: (@navbar-height + (@grid-gutter-width / 2));
   }
 }
-.navbar.container {
-  @tablet:  ~"screen and (min-width: @{screen-sm-min})";
-  @normal:  ~"screen and (min-width: @{screen-md-min})";
-  @wide:    ~"screen and (min-width: @{screen-lg-min})";
 
-  @media @tablet {
-    max-width: ((@container-sm - @grid-gutter-width));
+.navbar-brand {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  > img {
+    display: inline-block;
   }
-  @media @normal {
-    max-width: ((@container-md - @grid-gutter-width));
-  }
-  @media @wide {
-    max-width: ((@container-lg - @grid-gutter-width));
-  }
-}
-.navbar.container > .container,
-.navbar.container-fluid > .container-fluid {
-  margin: 0;
-  padding: 0;
-  width: auto;
 }
 
 .navbar-inverse {
@@ -48,12 +35,19 @@ body {
   .navbar-brand {
     color: darken(#fff, 10%);
   }
-  .navbar-brand:focus,
-  .navbar-brand:hover {
+  a:focus,
+  a:hover {
     color: #fff;
     background-color: lighten(@brand-primary, 2%);
     border-color: darken(@btn-primary-border, 5%);
   }
+  a.navbar-brand:focus,
+  a.navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
   .navbar-nav {
     >.active>a,
     >.active>a:focus,
