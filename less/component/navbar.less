@@ -26,37 +26,3 @@ body {
     display: inline-block;
   }
 }
-
-.navbar-inverse {
-  background-color: @btn-primary-border;
-  border-color: darken(@btn-primary-border, 15%);
-  .navbar-nav>li>a,
-  .navbar-text,
-  .navbar-brand {
-    color: darken(#fff, 10%);
-  }
-  a:focus,
-  a:hover {
-    color: #fff;
-    background-color: lighten(@brand-primary, 2%);
-    border-color: darken(@btn-primary-border, 5%);
-  }
-  a.navbar-brand:focus,
-  a.navbar-brand:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent;
-  }
-
-  .navbar-nav {
-    >.active>a,
-    >.active>a:focus,
-    >.active>a:hover,
-    >li>a:focus,
-    li>a:hover {
-      color: #fff;
-      background-color: lighten(@brand-primary, 2%);
-      border-color: darken(@btn-primary-border, 5%);
-    }
-  }
-}

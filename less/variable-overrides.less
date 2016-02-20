@@ -30,3 +30,29 @@
 @progress-bar-bg:             @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 @badge-bg:                    @brand-primary;
+
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+@navbar-inverse-color:                      darken(#fff, 10%);
+@navbar-inverse-bg:                         @btn-primary-border;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 15%);
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 @navbar-inverse-color;
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              lighten(@brand-primary, 2%);;
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             lighten(@brand-primary, 2%);
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            @navbar-inverse-link-hover-bg;
+@navbar-inverse-toggle-icon-bar-bg:         @gray-lighter;
+@navbar-inverse-toggle-border-color:        transparent;
