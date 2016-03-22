@@ -10,6 +10,15 @@
     margin-right: -@navbar-padding-horizontal;
   }
 
+  .navbar-brand {
+    font-size: ceil((@font-size-base * 1.40)); // ~20px;
+    color: #fff;
+  }
+
+  .navbar-nav>li>a {
+    font-size: ceil((@font-size-base * 1.1)); // ~16px;;
+  }
+
   @media (min-width: @grid-float-breakpoint) {
     .navbar {
       margin-top:@jumbotron-padding;

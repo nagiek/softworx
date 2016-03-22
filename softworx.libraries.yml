@@ -2,6 +2,7 @@ global-styling:
   css:
     theme:
       css/3.3.6/bootstrap-softworx-lumen.min.css: {}
+      'https://fonts.googleapis.com/css?family=Open+Sans': { type: external }
 
 bootstrap-scripts:
   js:
