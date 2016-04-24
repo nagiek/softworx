@@ -22,7 +22,7 @@
 /**
  * Implements template_preprocess_block
  */
-function softworx_preprocess_block(&$variables) {
+function softworx_preprocess_block(array &$variables) {
   // Caching temporarily moved to the `blockcache` module.
 
   switch ($variables['base_plugin_id']) {
@@ -39,7 +39,7 @@ function softworx_preprocess_block(&$variables) {
 /**
  * Implements template_preprocess_node
  */
-function softworx_preprocess_node(&$variables) {
+function softworx_preprocess_node(array &$variables) {
   $node = $variables['elements']['#node'];
   switch ($node->getType()) {
     case 'story':
@@ -51,12 +51,23 @@ function softworx_preprocess_node(&$variables) {
       break;
   }
 }
-
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function softworx_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  // Add a special view_mode theme suggestion for nodes.
+  if ($variables['element']['#entity_type'] == 'node') {
+    $suggestions[] = 'field__' . $variables['element']['#entity_type'] . '__' .
+                      $variables['element']['#bundle'] . '__' .
+                      $variables['element']['#field_type'] . '__' .
+                      $variables['element']['#view_mode'];
+  }
+}
 
 /**
  * Implements template_preprocess_links
  */
-function softworx_preprocess_links(&$variables) {
+function softworx_preprocess_links(array &$variables) {
   if (isset($variables['links']['node-readmore'])) {
     $link = &$variables['links']['node-readmore']['link'];
     $node = $link['#url']->getOption('entity');

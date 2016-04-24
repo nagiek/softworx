@@ -20,11 +20,12 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
+{% set offsetKey = (rows.count % 2 == 0 ? 2 : 1) %}
 {% for key,row in rows %}
   {%
     set row_classes = [
       default_row_class ? 'views-row',
-      key == 0 ? 'col-sm-offset-1' : 'col-sm-offset-0',
+      key == 0 ? "col-sm-offset-#{offsetKey}" : 'col-sm-offset-0',
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
