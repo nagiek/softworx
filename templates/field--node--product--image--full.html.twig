@@ -46,6 +46,14 @@
   ]
 %}
 {%
+  set logoClasses = [
+    'col-sm-6',
+    'col-sm-offset-3',
+    'col-xs-10',
+    'col-xs-offset-1'
+  ]
+%}
+{%
   set title_classes = [
     'field--label',
     label_display == 'visually_hidden' ? 'sr-only',
@@ -55,13 +63,13 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field--items', 'row') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field--item', 'col-xs-6', 'col-xs-offset-3') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field--item', logoClasses) }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     <div class='row'>
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item', 'col-xs-6', 'col-xs-offset-3') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field--item', logoClasses) }}>{{ item.content }}</div>
     {% endfor %}
     </div>
   {% endif %}
@@ -72,7 +80,7 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field--item', 'col-xs-6', 'col-xs-offset-3') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('field--item', logoClasses) }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
